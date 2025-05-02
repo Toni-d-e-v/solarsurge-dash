@@ -1,11 +1,14 @@
-import darkLogo from "@/assets/logos/dark.svg";
-import logo from "@/assets/logos/main.svg";
+import darkLogo from "@/assets/logos/dark.png";
+import logo from "@/assets/logos/white.png";
 import Image from "next/image";
 
 export function Logo() {
   return (
-    <div className="relative h-8 max-w-[10.847rem]">
-      <Image
+    <div className="relative h-16 ">
+      <h1 className="text-5xl font-extrabold tracking-tight text-green ">
+        SolarSurge
+      </h1>
+      {/* <Image
         src={logo}
         fill
         className="dark:hidden"
@@ -21,7 +24,7 @@ export function Logo() {
         alt="NextAdmin logo"
         role="presentation"
         quality={100}
-      />
+      /> */}
     </div>
   );
 }

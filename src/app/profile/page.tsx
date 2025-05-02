@@ -9,9 +9,11 @@ import { SocialAccounts } from "./_components/social-accounts";
 
 export default function Page() {
   const [data, setData] = useState({
-    name: "Danish Heilium",
-    profilePhoto: "/images/user/user-03.png",
-    coverPhoto: "/images/cover/cover-01.png",
+    name: "Marko Solana",
+    profilePhoto: "/images/user/dog.jpg",
+    coverPhoto: "/images/cover/image.webp",
+    address: "EnRgjfWpc4rZN6pCziv2cncG3ArxQUXPNxi9VugZMaT7",
+
   });
 
   const handleChange = (e: any) => {
@@ -43,17 +45,13 @@ export default function Page() {
 
       <div className="overflow-hidden rounded-[10px] bg-white shadow-1 dark:bg-gray-dark dark:shadow-card">
         <div className="relative z-20 h-35 md:h-65">
-          <Image
-            src={data?.coverPhoto}
-            alt="profile cover"
-            className="h-full w-full rounded-tl-[10px] rounded-tr-[10px] object-cover object-center"
-            width={970}
-            height={260}
-            style={{
-              width: "auto",
-              height: "auto",
-            }}
-          />
+        <Image
+              src={data?.coverPhoto}
+              alt="profile cover"
+              className="w-full h-[260px] rounded-tl-[10px] rounded-tr-[10px] object-cover object-center"
+              width={970}
+              height={260}
+            />
           <div className="absolute bottom-1 right-1 z-10 xsm:bottom-4 xsm:right-4">
             <label
               htmlFor="cover"
@@ -110,25 +108,28 @@ export default function Page() {
             <h3 className="mb-1 text-heading-6 font-bold text-dark dark:text-white">
               {data?.name}
             </h3>
-            <p className="font-medium">Ui/Ux Designer</p>
+            <span className="inline-flex items-center gap-2">
+              <span className="font-medium truncate">{data.address}</span>
+              <img src="/images/icon/solana.png" alt="Solana" className="w-5 h-5 flex-shrink-0" />
+            </span>
             <div className="mx-auto mb-5.5 mt-5 grid max-w-[370px] grid-cols-3 rounded-[5px] border border-stroke py-[9px] shadow-1 dark:border-dark-3 dark:bg-dark-2 dark:shadow-card">
               <div className="flex flex-col items-center justify-center gap-1 border-r border-stroke px-4 dark:border-dark-3 xsm:flex-row">
                 <span className="font-medium text-dark dark:text-white">
-                  259
+                  580.65 
                 </span>
-                <span className="text-body-sm">Posts</span>
+                <span className="text-body-sm">Surplus</span>
               </div>
               <div className="flex flex-col items-center justify-center gap-1 border-r border-stroke px-4 dark:border-dark-3 xsm:flex-row">
                 <span className="font-medium text-dark dark:text-white">
-                  129K
+                  15th
                 </span>
-                <span className="text-body-sm">Followers</span>
+                <span className="text-body-sm">Top User</span>
               </div>
               <div className="flex flex-col items-center justify-center gap-1 px-4 xsm:flex-row">
                 <span className="font-medium text-dark dark:text-white">
-                  2K
+                  2640$ 
                 </span>
-                <span className="text-body-sm-sm">Following</span>
+                <span className="text-body-sm-sm">Earned</span>
               </div>
             </div>
 
@@ -137,11 +138,10 @@ export default function Page() {
                 About Me
               </h4>
               <p className="mt-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Pellentesque posuere fermentum urna, eu condimentum mauris
-                tempus ut. Donec fermentum blandit aliquet. Etiam dictum dapibus
-                ultricies. Sed vel aliquet libero. Nunc a augue fermentum,
-                pharetra ligula sed, aliquam lacus.
+                I have a setup of 4 solar panels at home,
+                and thanks to the SolarSurge project, I can now easily track how much energy I'm producing 
+                It's helped me make the most of my green energy — I can see when I have surplus and even earn from it.
+                SolarSurge makes managing my solar power simple, transparent, and way more rewarding.
               </p>
             </div>
 

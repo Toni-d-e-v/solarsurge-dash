@@ -9,10 +9,12 @@ import {
 import { compactFormat, standardFormat } from "@/lib/format-number";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-import { getTopChannels } from "../fetch";
+import { getDevices } from "../fetch";
+import { TbDeviceAnalytics } from "react-icons/tb";
+import { VscRunCoverage } from "react-icons/vsc";
 
 export async function TopChannels({ className }: { className?: string }) {
-  const data = await getTopChannels();
+  const data = await getDevices();
 
   return (
     <div
@@ -22,51 +24,46 @@ export async function TopChannels({ className }: { className?: string }) {
       )}
     >
       <h2 className="mb-4 text-body-2xlg font-bold text-dark dark:text-white">
-        Top Channels
+        Connected Devices
       </h2>
-
       <Table>
-        <TableHeader>
-          <TableRow className="border-none uppercase [&>th]:text-center">
-            <TableHead className="min-w-[120px] !text-left">Source</TableHead>
-            <TableHead>Visitors</TableHead>
-            <TableHead className="!text-right">Revenues</TableHead>
-            <TableHead>Sales</TableHead>
-            <TableHead>Conversion</TableHead>
-          </TableRow>
-        </TableHeader>
+  <TableHeader>
+    
+    <TableRow className="border-none uppercase [&>th]:text-center">
+      <TableHead className="min-w-[120px] !text-left">Device</TableHead>
+      <TableHead></TableHead>
+      <TableHead className="!text-right">Status</TableHead>
+      <TableHead  className="!text-right">kWh</TableHead>
+    </TableRow>
+  </TableHeader>
 
-        <TableBody>
-          {data.map((channel, i) => (
-            <TableRow
-              className="text-center text-base font-medium text-dark dark:text-white"
-              key={channel.name + i}
-            >
-              <TableCell className="flex min-w-fit items-center gap-3">
-                <Image
-                  src={channel.logo}
-                  className="size-8 rounded-full object-cover"
-                  width={40}
-                  height={40}
-                  alt={channel.name + " Logo"}
-                  role="presentation"
-                />
-                <div className="">{channel.name}</div>
-              </TableCell>
+  <TableBody>
+    {data.map((channel, i) => (
+      <TableRow
+        key={channel.name}
+        className="text-base font-medium text-dark dark:text-white"
+      >
+        <TableCell className="flex items-center gap-3 ">
+          <TbDeviceAnalytics/>
+          {channel.name}
+        </TableCell>
 
-              <TableCell>{compactFormat(channel.visitors)}</TableCell>
+        <TableCell>{channel.info}</TableCell>
 
-              <TableCell className="!text-right text-green-light-1">
-                ${standardFormat(channel.revenues)}
-              </TableCell>
+        <TableCell className="!text-right  text-green-light-1">
+          <div className="inline-flex gap-1">
+            <VscRunCoverage/> {channel.status}
+          </div>
+        </TableCell>
 
-              <TableCell>{channel.sales}</TableCell>
+        <TableCell className="!text-right">
+          {channel.kwh}
+        </TableCell>
+      </TableRow>
+    ))}
+  </TableBody>
+</Table>
 
-              <TableCell>{channel.conversion}%</TableCell>
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
     </div>
   );
 }

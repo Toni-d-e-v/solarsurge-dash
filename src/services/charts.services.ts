@@ -36,6 +36,62 @@ export async function getDevicesUsedData(
 
   return data;
 }
+export async function getEnergyOverviewData(
+  timeFrame?: "monthly" | "yearly" | (string & {}),
+) {
+  
+  await new Promise((resolve) => setTimeout(resolve, 1000));
+
+  if (timeFrame === "yearly") {
+    return {
+      used: [
+        { x: 2020, y: 450 },
+        { x: 2021, y: 620 },
+        { x: 2022, y: 780 },
+        { x: 2023, y: 920 },
+        { x: 2024, y: 1080 },
+      ],
+      surplus: [
+        { x: 2020, y: 1480 },
+        { x: 2021, y: 1720 },
+        { x: 2022, y: 1950 },
+        { x: 2023, y: 2300 },
+        { x: 2024, y: 1200 },
+      ],
+    };
+  }
+
+  return {
+    used: [
+      { x: "Jan", y: 21 },
+      { x: "Feb", y: 27 },
+      { x: "Mar", y: 24 },
+      { x: "Apr", y: 23 },
+      { x: "May", y: 29 },
+      { x: "Jun", y: 32 },
+      { x: "Jul", y: 36 },
+      { x: "Aug", y: 31},
+      { x: "Sep", y: 32 },
+      { x: "Oct", y: 29 },
+      { x: "Nov", y: 26 },
+      { x: "Dec", y: 22 },
+    ],
+    surplus: [
+      { x: "Jan", y: 25 },
+      { x: "Feb", y: 28 },
+      { x: "Mar", y: 27 },
+      { x: "Apr", y: 29 },
+      { x: "May", y: 31 },
+      { x: "Jun", y: 35 },
+      { x: "Jul", y: 39 },
+      { x: "Aug", y: 41 },
+      { x: "Sep", y: 35 },
+      { x: "Oct", y: 32 },
+      { x: "Nov", y: 28 },
+      { x: "Dec", y: 25 },
+    ],
+  };
+}
 
 export async function getPaymentsOverviewData(
   timeFrame?: "monthly" | "yearly" | (string & {}),
@@ -100,29 +156,38 @@ export async function getWeeksProfitData(timeFrame?: string) {
 
   if (timeFrame === "last week") {
     return {
-      sales: [
-        { x: "Sat", y: 33 },
-        { x: "Sun", y: 44 },
-        { x: "Mon", y: 31 },
-        { x: "Tue", y: 57 },
-        { x: "Wed", y: 12 },
-        { x: "Thu", y: 33 },
-        { x: "Fri", y: 55 },
+      BTC: [
+        { x: "Sat", y: 14 },
+        { x: "Sun", y: 25 },
+        { x: "Mon", y: 41 },
+        { x: "Tue", y: 37 },
+        { x: "Wed", y: 22 },
+        { x: "Thu", y: 43 },
+        { x: "Fri", y: 85 },
       ],
-      revenue: [
-        { x: "Sat", y: 10 },
-        { x: "Sun", y: 20 },
-        { x: "Mon", y: 17 },
-        { x: "Tue", y: 7 },
-        { x: "Wed", y: 10 },
-        { x: "Thu", y: 23 },
-        { x: "Fri", y: 13 },
+      ORE: [
+        { x: "Sat", y: 13 },
+        { x: "Sun", y: 53 },
+        { x: "Mon", y: 20 },
+        { x: "Tue", y: 56 },
+        { x: "Wed", y: 13 },
+        { x: "Thu", y: 27 },
+        { x: "Fri", y: 15 },
+      ],
+      TASKS: [
+        { x: "Sat", y: 13 },
+        { x: "Sun", y: 23 },
+        { x: "Mon", y: 20 },
+        { x: "Tue", y: 8 },
+        { x: "Wed", y: 33 },
+        { x: "Thu", y: 27 },
+        { x: "Fri", y: 15 },
       ],
     };
   }
 
   return {
-    sales: [
+    BTC: [
       { x: "Sat", y: 44 },
       { x: "Sun", y: 55 },
       { x: "Mon", y: 41 },
@@ -131,7 +196,16 @@ export async function getWeeksProfitData(timeFrame?: string) {
       { x: "Thu", y: 43 },
       { x: "Fri", y: 65 },
     ],
-    revenue: [
+    ORE: [
+      { x: "Sat", y: 13 },
+      { x: "Sun", y: 23 },
+      { x: "Mon", y: 20 },
+      { x: "Tue", y: 8 },
+      { x: "Wed", y: 13 },
+      { x: "Thu", y: 27 },
+      { x: "Fri", y: 15 },
+    ],
+    TASKS: [
       { x: "Sat", y: 13 },
       { x: "Sun", y: 23 },
       { x: "Mon", y: 20 },

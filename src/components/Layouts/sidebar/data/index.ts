@@ -7,19 +7,43 @@ export const NAV_DATA = [
       {
         title: "Dashboard",
         icon: Icons.HomeIcon,
-        items: [
-          {
-            title: "eCommerce",
-            url: "/",
-          },
-        ],
+        url: "/",
+        items: [],
+
       },
       {
-        title: "Calendar",
-        url: "/calendar",
-        icon: Icons.Calendar,
+        title: "Wallet",
+        url: "/wallet",
+        icon: Icons.Wallet,
         items: [],
       },
+      {
+        title: "Marketplace",
+        url: "/marketplace",
+        icon: Icons.Marketplace,
+        items: [],
+      },
+      {
+        title: "Buy devices",
+        url: "/upgrade",
+        icon: Icons.upgrade,
+        items: [],
+      },
+      {
+        title: "Invest",
+        url: "/invest",
+        icon: Icons.Invest,
+        items: [],
+      },
+      {
+        title: "zBTC",
+        url: "/zbtc",
+        icon: Icons.zbtc,
+        items: [],
+      },
+
+      
+
       {
         title: "Profile",
         url: "/profile",
@@ -27,79 +51,55 @@ export const NAV_DATA = [
         items: [],
       },
       {
-        title: "Forms",
-        icon: Icons.Alphabet,
-        items: [
-          {
-            title: "Form Elements",
-            url: "/forms/form-elements",
-          },
-          {
-            title: "Form Layout",
-            url: "/forms/form-layout",
-          },
-        ],
+        title: "Settings",
+        url: "/pages/settings",
+        icon: Icons.Settings,
+        items: [],
       },
-      {
-        title: "Tables",
-        url: "/tables",
-        icon: Icons.Table,
-        items: [
-          {
-            title: "Tables",
-            url: "/tables",
-          },
-        ],
-      },
-      {
-        title: "Pages",
-        icon: Icons.Alphabet,
-        items: [
-          {
-            title: "Settings",
-            url: "/pages/settings",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    label: "OTHERS",
-    items: [
-      {
-        title: "Charts",
-        icon: Icons.PieChart,
-        items: [
-          {
-            title: "Basic Chart",
-            url: "/charts/basic-chart",
-          },
-        ],
-      },
-      {
-        title: "UI Elements",
-        icon: Icons.FourCircle,
-        items: [
-          {
-            title: "Alerts",
-            url: "/ui-elements/alerts",
-          },
-          {
-            title: "Buttons",
-            url: "/ui-elements/buttons",
-          },
-        ],
-      },
-      {
-        title: "Authentication",
-        icon: Icons.Authentication,
-        items: [
-          {
-            title: "Sign In",
-            url: "/auth/sign-in",
-          },
-        ],
-      },
+
+      // {
+      //   title: "DEV TOOLS",
+      //   icon: Icons.Alphabet,
+      //   items: [
+      //     {
+      //       title: "Form Elements",
+      //       url: "/forms/form-elements",
+      //     },
+      //     {
+      //       title: "Form Layout",
+      //       url: "/forms/form-layout",
+      //     },
+      //     { 
+      //       title: "Calendar",
+      //       url: "/calendar",
+      //     },
+      //     {
+      //       title: "Tables",
+      //       url: "/tables",
+      //     },
+      //     {
+      //       title: "Settings",
+      //       url: "/pages/settings",
+      //     },
+      //     {
+      //       title: "Basic Chart",
+      //       url: "/charts/basic-chart",
+      //     },
+      //     {
+      //       title: "Alerts",
+      //       url: "/ui-elements/alerts",
+      //     },
+      //     {
+      //       title: "Buttons",
+      //       url: "/ui-elements/buttons",
+      //     },
+      //     {
+      //       title: "Sign In",
+      //       url: "/auth/sign-in",
+      //     },
+      //   ],
+      // },
+
     ],
   },
 ];

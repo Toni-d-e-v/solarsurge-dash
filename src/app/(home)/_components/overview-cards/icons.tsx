@@ -1,4 +1,9 @@
 import type { SVGProps } from "react";
+import * as logos from "@/assets/logos";
+import Image from "next/image";
+import { MdOutlineEnergySavingsLeaf } from "react-icons/md";
+import { GiToken } from "react-icons/gi";
+import { FaTasks } from "react-icons/fa";
 
 type SVGPropsType = SVGProps<SVGSVGElement>;
 
@@ -17,6 +22,73 @@ export function Views(props: SVGPropsType) {
         fill="#fff"
       />
     </svg>
+  );
+}
+export function SurplusEnergyIcon(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <div
+      style={{
+        width: 58,
+        height: 58,
+        borderRadius: "50%",
+        backgroundColor: "blue",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      <MdOutlineEnergySavingsLeaf size={32} color="white" />
+    </div>
+  );
+}
+export function DEEEarnedIcon(props: SVGPropsType) {
+  return (
+    <div
+      style={{
+        width: 58,
+        height: 58,
+        borderRadius: "50%",
+        backgroundColor: "green",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      <GiToken size={32} color="white" />
+    </div>
+  );
+}
+
+export function BTCMinedIcon(props: SVGPropsType) {
+  return (
+   <div> 
+
+     <Image
+                      src={logos.bitcoin}
+                      width={58}
+                      height={58}
+                      alt={" Logo"}
+                      role="presentation"
+                    />
+   </div>
+  );
+}
+
+export function TasksCompletedIcon(props: SVGPropsType) {
+  return (
+    <div
+      style={{
+        width: 58,
+        height: 58,
+        borderRadius: "50%",
+        backgroundColor: "purple",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      <FaTasks size={32} color="white" />
+    </div>
   );
 }
 

@@ -119,3 +119,29 @@ export async function getTopChannels() {
     },
   ];
 }
+export async function getDevices() {
+  // Fake delay
+  await new Promise((resolve) => setTimeout(resolve, 1500));
+
+  return [
+    {
+      name: "SolarSurge Device (Default)",
+      info: "ARM hardware inside the device. Mines ORE and runs tasks.",
+      status: "Running",
+      kwh: 12,
+    },
+    {
+      name: "ASIC (BTC)",
+      info: "Hardware used for BITCOIN mining.",
+      status: "Running",
+      kwh: 95,
+    },
+    {
+      name: "Ryzen 7 PC (UTILITY)",
+      info: "Hardware used to run tasks to earn UTILITY tokens.",
+      status: "Running",
+      kwh: 47,
+    },
+    
+  ];
+}

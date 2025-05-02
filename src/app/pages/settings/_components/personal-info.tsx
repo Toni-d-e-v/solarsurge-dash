@@ -4,6 +4,8 @@ import {
   PencilSquareIcon,
   UserIcon,
 } from "@/assets/icons";
+import { Button } from "@/components/ui-elements/button";
+
 import InputGroup from "@/components/FormElements/InputGroup";
 import { TextAreaGroup } from "@/components/FormElements/InputGroup/text-area";
 import { ShowcaseSection } from "@/components/Layouts/showcase-section";
@@ -18,45 +20,37 @@ export function PersonalInfoForm() {
             type="text"
             name="fullName"
             label="Full Name"
-            placeholder="David Jhon"
-            defaultValue="David Jhon"
+            placeholder="Marko Solana"
+            defaultValue="Marko Solana"
             icon={<UserIcon />}
             iconPosition="left"
             height="sm"
           />
 
-          <InputGroup
-            className="w-full sm:w-1/2"
-            type="text"
-            name="phoneNumber"
-            label="Phone Number"
-            placeholder="+990 3343 7865"
-            defaultValue={"+990 3343 7865"}
-            icon={<CallIcon />}
-            iconPosition="left"
-            height="sm"
-          />
+          
+      
         </div>
-
-        <InputGroup
-          className="mb-5.5"
-          type="email"
-          name="email"
-          label="Email Address"
-          placeholder="devidjond45@gmail.com"
-          defaultValue="devidjond45@gmail.com"
-          icon={<EmailIcon />}
-          iconPosition="left"
-          height="sm"
-        />
-
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full">
+          <InputGroup
+            className="w-full sm:mb-0"
+            type="text"
+            name="text"
+            label="Solana Address"
+            placeholder="EnRgjfWpc4rZN6pCziv2cncG3ArxQUXPNxi9VugZMaT7"
+            defaultValue="EnRgjfWpc4rZN6pCziv2cncG3ArxQUXPNxi9VugZMaT7"
+            height="sm"
+            disabled
+          />
+          <Button label="Connect new" variant="primary" shape="rounded" className="w-full sm:w-auto" />
+        </div>
+              
         <InputGroup
           className="mb-5.5"
           type="text"
           name="username"
           label="Username"
-          placeholder="devidjhon24"
-          defaultValue="devidjhon24"
+          placeholder="Marko Solana"
+          defaultValue="Marko Solana"
           icon={<UserIcon />}
           iconPosition="left"
           height="sm"
@@ -67,7 +61,10 @@ export function PersonalInfoForm() {
           label="BIO"
           placeholder="Write your bio here"
           icon={<PencilSquareIcon />}
-          defaultValue="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lacinia turpis tortor, consequat efficitur mi congue a. Curabitur cursus, ipsum ut lobortis sodales, enim arcu pellentesque lectus ac suscipit diam sem a felis. Cras sapien ex, blandit eu dui et suscipit gravida nunc. Sed sed est quis dui."
+          defaultValue="I have a setup of 4 solar panels at home,
+                and thanks to the SolarSurge project, I can now easily track how much energy I'm producing 
+                It's helped me make the most of my green energy — I can see when I have surplus and even earn from it.
+                SolarSurge makes managing my solar power simple, transparent, and way more rewarding."
         />
 
         <div className="flex justify-end gap-3">

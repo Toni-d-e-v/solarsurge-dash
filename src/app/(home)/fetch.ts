@@ -1,26 +1,27 @@
-export async function getOverviewData() {
-  // Fake delay
+export async function getDeviceStats() {
+  // Simulate network delay
   await new Promise((resolve) => setTimeout(resolve, 2000));
 
   return {
-    views: {
-      value: 3456,
-      growthRate: 0.43,
+    surplusEnergy: {
+      value: 23287.6, // in kWh
+      growthRate: 3.5,
     },
-    profit: {
-      value: 4220,
-      growthRate: 4.35,
+    deeEarned: {
+      value: 332, // SST tokens
+      growthRate: 15.2,
     },
-    products: {
-      value: 3456,
-      growthRate: 2.59,
+    btcMined: {
+      value: 0.002, // BTC
+      growthRate: 0.8,
     },
-    users: {
-      value: 3456,
-      growthRate: -0.95,
+    tasksCompleted: {
+      value: 147, // successful jobs done
+      growthRate: 21.9,
     },
   };
 }
+
 
 export async function getChatsData() {
   // Fake delay

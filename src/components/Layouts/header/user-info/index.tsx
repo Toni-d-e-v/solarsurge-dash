@@ -16,9 +16,10 @@ export function UserInfo() {
   const [isOpen, setIsOpen] = useState(false);
 
   const USER = {
-    name: "John Smith",
+    name: "Marko",
     email: "johnson@nextadmin.com",
-    img: "/images/user/user-03.png",
+    address: "EnRgjfWpc4rZN6pCziv2cncG3ArxQUXPNxi9VugZMaT7",
+    img: "/images/user/dog.jpg",
   };
 
   return (
@@ -29,7 +30,8 @@ export function UserInfo() {
         <figure className="flex items-center gap-3">
           <Image
             src={USER.img}
-            className="size-12"
+            className="size-12 rounded-full"
+
             alt={`Avatar of ${USER.name}`}
             role="presentation"
             width={200}
@@ -59,7 +61,7 @@ export function UserInfo() {
         <figure className="flex items-center gap-2.5 px-5 py-3.5">
           <Image
             src={USER.img}
-            className="size-12"
+            className="size-12  rounded-full"
             alt={`Avatar for ${USER.name}`}
             role="presentation"
             width={200}
@@ -71,8 +73,12 @@ export function UserInfo() {
               {USER.name}
             </div>
 
-            <div className="leading-none text-gray-6">{USER.email}</div>
-          </figcaption>
+            <div className="leading-none text-gray-600">
+              <span className="font-bold">{USER.address.slice(0, 6)}</span>
+              ...
+              <span className="font-bold">{USER.address.slice(-6)}</span>
+            </div>          
+            </figcaption>
         </figure>
 
         <hr className="border-[#E8E8E8] dark:border-dark-3" />

@@ -1,47 +1,48 @@
 import { compactFormat } from "@/lib/format-number";
-import { getOverviewData } from "../../fetch";
+import { getDeviceStats } from "../../fetch"; // <- Adjust this to your actual API
 import { OverviewCard } from "./card";
 import * as icons from "./icons";
+import { MdOutlineEnergySavingsLeaf } from "react-icons/md";
 
 export async function OverviewCardsGroup() {
-  const { views, profit, products, users } = await getOverviewData();
+  const { surplusEnergy, deeEarned, btcMined, tasksCompleted } = await getDeviceStats();
 
   return (
     <div className="grid gap-4 sm:grid-cols-2 sm:gap-6 xl:grid-cols-4 2xl:gap-7.5">
       <OverviewCard
-        label="Total Views"
+        label="Surplus Energy Used"
         data={{
-          ...views,
-          value: compactFormat(views.value),
+          ...surplusEnergy,
+          value: compactFormat(surplusEnergy.value) + " kWh",
         }}
-        Icon={icons.Views}
+        Icon={icons.SurplusEnergyIcon}
       />
 
       <OverviewCard
-        label="Total Profit"
+        label="SST Tokens Earned 1 kWh = 1 SST"
         data={{
-          ...profit,
-          value: "$" + compactFormat(profit.value),
+          ...deeEarned,
+          value: compactFormat(deeEarned.value),
         }}
-        Icon={icons.Profit}
+        Icon={icons.DEEEarnedIcon}
       />
 
       <OverviewCard
-        label="Total Products"
+        label="BTC Mined"
         data={{
-          ...products,
-          value: compactFormat(products.value),
+          ...btcMined,
+          value: compactFormat(btcMined.value) + " BTC",
         }}
-        Icon={icons.Product}
+        Icon={icons.BTCMinedIcon}
       />
 
       <OverviewCard
-        label="Total Users"
+        label="Tasks Completed"
         data={{
-          ...users,
-          value: compactFormat(users.value),
+          ...tasksCompleted,
+          value: compactFormat(tasksCompleted.value),
         }}
-        Icon={icons.Users}
+        Icon={icons.TasksCompletedIcon}
       />
     </div>
   );

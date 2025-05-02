@@ -22,7 +22,7 @@ export function PaymentsOverviewChart({ data }: PropsType) {
     legend: {
       show: false,
     },
-    colors: ["#5750F1", "#0ABEF9"],
+    colors: ["green", "#0ABEF9"],
     chart: {
       height: 310,
       type: "area",
@@ -91,12 +91,12 @@ export function PaymentsOverviewChart({ data }: PropsType) {
         options={options}
         series={[
           {
-            name: "Received",
-            data: data.received,
+            name: "Used Energy",
+            data: data.used,
           },
           {
-            name: "Due",
-            data: data.due,
+            name: "Surplus Energy",
+            data: data.surplus,
           },
         ]}
         type="area"
