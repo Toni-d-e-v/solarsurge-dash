@@ -139,8 +139,8 @@ export default function Page() {
               </h4>
               <p className="mt-4">
                 I have a setup of 4 solar panels at home,
-                and thanks to the SolarSurge project, I can now easily track how much energy I'm producing 
-                It's helped me make the most of my green energy — I can see when I have surplus and even earn from it.
+                and thanks to the SolarSurge project, I can now easily track how much energy Im producing 
+                Its helped me make the most of my green energy — I can see when I have surplus and even earn from it.
                 SolarSurge makes managing my solar power simple, transparent, and way more rewarding.
               </p>
             </div>

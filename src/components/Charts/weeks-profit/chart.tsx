@@ -5,8 +5,10 @@ import dynamic from "next/dynamic";
 
 type PropsType = {
   data: {
-    sales: { x: string; y: number }[];
-    revenue: { x: string; y: number }[];
+    BTC: { x: string; y: number }[];
+    ORE: { x: string; y: number }[];
+    TASKS: { x: string; y: number }[];
+
   };
 };
 

@@ -14,7 +14,7 @@ type Transaction = {
   date: string;
   token: "BTC" | "ORE" | "SST";
   amount: number;
-  type: "Deposit" | "Withdrawal";
+  type: "Deposit" | "Withdrawal" | "Reward";
 };
 
 async function WalletPage() {

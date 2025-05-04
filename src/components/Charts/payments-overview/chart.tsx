@@ -6,8 +6,8 @@ import dynamic from "next/dynamic";
 
 type PropsType = {
   data: {
-    received: { x: unknown; y: number }[];
-    due: { x: unknown; y: number }[];
+    used: { x: unknown; y: number }[];
+    surplus: { x: unknown; y: number }[];
   };
 };
 

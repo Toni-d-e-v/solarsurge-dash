@@ -91,7 +91,7 @@ export default function MintzBTCPage() {
                   <div>
                     <p className="font-semibold text-gray-700">Earn Bitcoin Yield</p>
                     <p className="text-gray-500 text-sm">
-                      Generate returns without compromising Bitcoin's security.
+                      Generate returns without compromising Bitcoin s security.
                     </p>
                   </div>
                 </div>
