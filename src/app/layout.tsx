@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     default: "SolarSurge",
   },
   description:
-    "Next.js admin dashboard toolkit with 200+ templates, UI components, and integrations for fast dashboard development.",
+    "Next-gen dashboard for SolarSurge!",
 };
 
 export default function RootLayout({ children }: PropsWithChildren) {
